@@ -3,8 +3,8 @@ body{
 }
 .chat{
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     white-space: nowrap;
@@ -13,7 +13,7 @@ body{
     border-right: solid 2px gray;
     position: relative;
     width: 70%;
-    top: 0px;
+    top: 0;
     height: 100%;
     float: left;
     bottom: 10px;
@@ -23,7 +23,7 @@ body{
 .usersOnline{
     border-left: solid 2px gray;
     left: -0px;
-    top: 0px;
+    top: 0;
     position: relative;
     width: 29%;
     height: 100%;
@@ -53,8 +53,8 @@ body{
 }
 .upperLineMain{
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     font-family: cursive;
     height: 1.2em;
@@ -62,8 +62,8 @@ body{
 }
 .upperLineUsers{
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 150%;
     font-family: cursive;
     height: 1.2em;
@@ -99,4 +99,16 @@ body{
 }
 .nickname{
     color: darkcyan;
+}
+.delete{
+    position: absolute;
+    right: -11px;
+    top: -8px;
+    visibility: hidden;
+}
+.edit{
+    position: absolute;
+    right: -11px;
+    top: 12px;
+    visibility: hidden;
 }
