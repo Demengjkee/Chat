@@ -33,7 +33,7 @@
 
         <div class="usernameLine">
             Your username:</br>
-            <input  type="text" class="username" value="">
+            <input type="text" class="username" value="">
         </div>
         <input type="submit" class="confirmNameButton" value="confirm">
         <div class = "upperLineUsers">
@@ -41,24 +41,8 @@
         </div>
     </div>
 </div>
-<!-- Later will be moved to .js file -->
-<script>
-    var messages = document.getElementsByClassName("message1");
-    for(var i = 0;i < messages.length;i++){
-        messages.index = i;
-        messages[i].addEventListener("mouseover",function(){
-            this.childNodes[3].style.visibility = "visible";
-            this.childNodes[5].style.visibility = "visible";
-        });
-    }
-    for(var j = 0;j < messages.length;j++){
-        messages.item(j).addEventListener("mouseout",function(){
-            this.childNodes[3].style.visibility = "hidden";
-            this.childNodes[5].style.visibility = "hidden";
-        });
-    }
-</script>
 
+<script src="Events.js"></script>
 
 </body>
 </html>
