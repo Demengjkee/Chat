@@ -44,7 +44,6 @@ body{
     bottom: 1%;
     width: 10%;
 }
-
 .confirmNameButton{
     position: absolute;
     right: 1%;
@@ -70,12 +69,10 @@ body{
     border-bottom: solid 4px grey;
 }
 .usernameLine{
-
     position: absolute;
     left: 2%;
     bottom: 1%;
     width: 100%;
-
 }
 .username{
     width: 75%;

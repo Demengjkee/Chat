@@ -1,3 +1,4 @@
+// (Showing || hiding) (delete || edit) buttons
 var messages = document.getElementsByClassName("message1");
 for(var i = 0 ; i < messages.length ; i++) {
     messages[i].addEventListener("mouseover",function(){
