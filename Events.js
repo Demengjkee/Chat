@@ -5,9 +5,7 @@ for(var i = 0 ; i < messages.length ; i++) {
         this.childNodes[3].style.visibility = "visible";
         this.childNodes[5].style.visibility = "visible";
     });
-}
-for(var j = 0 ; j < messages.length ; j++) {
-    messages[j].addEventListener("mouseout",function(){
+    messages[i].addEventListener("mouseout",function(){
         this.childNodes[3].style.visibility = "hidden";
         this.childNodes[5].style.visibility = "hidden";
     });
