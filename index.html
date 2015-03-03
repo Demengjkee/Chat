@@ -3,28 +3,23 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>DemPracChat</title>
+    <script src="Events.js"></script>
 </head>
-<body text="white">
+<body text="white" onload="start();">
 <link rel = "stylesheet" href="styles.css">
+
 <div class = "chat">
     <div class = "mainWindow">
+
+        <div class = "upperLineMain">
+            <p class="text"> DemPracChat v.0.0.1 alpha </p>
+            <p class="rightText">Server: OK</p>
+        </div>
+
+    </div>
+    <div class = newMsg>
         <input type="text" class="message" placeholder="Type a message">
         <input type="submit" class="sendButton" value="send">
-        <div class = "upperLineMain">
-            DemPracChat v.0.0.1 alpha
-        </div>
-        <div class = "message1" id="1000000">
-            <span class="nickname">admin:</span>
-            <img src="resources/remove.png" class="delete">
-            <img src="resources/edit.png" class="edit">
-            <p class = "text">Test message <img  src="http://visualitygaming.net/Smileys/custom/megusta.png"></p>
-        </div>
-        <div class = "message1" id="1000001">
-            <span class="nickname">user1:</span>
-            <img src="resources/remove.png" class="delete">
-            <img src="resources/edit.png" class="edit">
-            <p class = "text">супер длинное сообщение вообще фиг знает че ща будет но надо проверить проверкапроверкапроверка тест тест</p>
-        </div>
     </div>
     <div class="usersOnline">
         <div class = "upperLineUsers">
@@ -36,16 +31,11 @@
             <input type="text" class="username" placeholder="Enter your nickname">
         </div>
         <input type="submit" class="confirmNameButton" value="confirm">
-        <div class = "onlineUser">
-            <p class="text">admin</p>
-        </div>
-        <div class = "onlineUser">
-            <p class="text">user1</p>
-        </div>
+
     </div>
 </div>
 
-<script src="Events.js"></script>
+
 
 </body>
 </html>
