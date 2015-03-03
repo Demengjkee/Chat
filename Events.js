@@ -12,7 +12,6 @@ function start() {
             this.childNodes[5].style.visibility = "hidden";
         });
     }
-    var deleteMsgButtons = document
     var sendButton = document.getElementsByClassName("sendButton");
     function addMessageDiv(Text){
         var newDiv = document.createElement('div');
