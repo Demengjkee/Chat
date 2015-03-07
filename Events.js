@@ -1,17 +1,6 @@
 // (Showing || hiding) (delete || edit) buttons
 function start() {
     var username;
-    var messages = document.getElementsByClassName("message1");
-    for (var i = 0; i < messages.length; i++) {
-        messages[i].addEventListener("mouseover", function () {
-            this.childNodes[3].style.visibility = "visible";
-            this.childNodes[5].style.visibility = "visible";
-        });
-        messages[i].addEventListener("mouseout", function () {
-            this.childNodes[3].style.visibility = "hidden";
-            this.childNodes[5].style.visibility = "hidden";
-        });
-    }
     var sendButton = document.getElementsByClassName("sendButton");
     function addMessageDiv(Text){
         var newDiv = document.createElement('div');
@@ -36,7 +25,16 @@ function start() {
                 this.childNodes[1].style.visibility = "hidden";
                 this.childNodes[2].style.visibility = "hidden";
             });
-            updateDeleteEditEvents();
+            messageDiv.childNodes[1].addEventListener("click", function(){
+                var todel = this.parentNode;
+                todel.parentNode.removeChild(todel);
+
+            });
+            messageDiv.childNodes[2].addEventListener("click", function(){
+                var oldmsg = this.parentNode.childNodes[3];
+                oldmsg = oldmsg.innerHTML;
+                this.parentNode.childNodes[3].innerHTML = prompt("EditMessage",oldmsg);
+            });
         }
         else {
             alert("please, enter your nickname");
@@ -58,22 +56,4 @@ function start() {
         }
         user.appendChild(addUserDiv());
     });
-    function updateDeleteEditEvents(){
-        var del = document.getElementsByClassName("delete");
-        var edit = document.getElementsByClassName("edit");
-        for (var i = 0; i < del.length ; i++) {
-            del[i].addEventListener("click", function(){
-                var todel = this.parentNode;
-                todel.parentNode.removeChild(todel);
-
-            });
-            edit[i].addEventListener("click", function(){
-                var oldmsg = this.parentNode.childNodes[3];
-                oldmsg = oldmsg.innerHTML;
-                var newMsg = prompt("EditMessage",oldmsg);
-                this.parentNode.childNodes[3].innerHTML = newMsg;
-            });
-        }
-    }
-
 }
