@@ -16,6 +16,7 @@ function start() {
             var msg = document.getElementsByClassName("message")[0].value;
             var messageDiv = addMessageDiv(msg);
             mainWindow.appendChild(messageDiv);
+            $(messageDiv).hide().fadeIn(150);
             document.getElementsByClassName("message")[0].value = "";
             messageDiv.addEventListener("mouseover", function () {
                 this.childNodes[1].style.visibility = "visible";
@@ -27,13 +28,17 @@ function start() {
             });
             messageDiv.childNodes[1].addEventListener("click", function(){
                 var todel = this.parentNode;
-                todel.parentNode.removeChild(todel);
+                $(todel).fadeOut(150,function(){
+                    todel.parentNode.removeChild(todel);
+                });
+
 
             });
             messageDiv.childNodes[2].addEventListener("click", function(){
                 var oldmsg = this.parentNode.childNodes[3];
                 oldmsg = oldmsg.innerHTML;
                 this.parentNode.childNodes[3].innerHTML = prompt("EditMessage",oldmsg);
+                $(this.parentNode.childNodes[3]).hide().fadeIn(300);
             });
         }
         else {
@@ -54,6 +59,8 @@ function start() {
         if(foreveralone != undefined) {
             user.removeChild(document.getElementsByClassName("onlineUser")[0]);
         }
-        user.appendChild(addUserDiv());
+        var userDiv = addUserDiv();
+        user.appendChild(userDiv);
+        $(userDiv).hide().fadeIn(150);
     });
 }
