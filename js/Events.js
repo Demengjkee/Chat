@@ -6,7 +6,7 @@ function start() {
         var newDiv = document.createElement('div');
         newDiv.className = 'message1';
         newDiv.innerHTML = "<span class = 'nickname'>" + username + ": " + "</span>"
-            + "<img src='../resources/remove.png' class='delete'>" +  "<img src='../resources/edit.png' class='edit'>"
+            + "<img src='resources/remove.png' class='delete'>" + "<img src='resources/edit.png' class='edit'>"
         + "<p class='text'>" + Text + "</p>";
         return newDiv;
     }
